@@ -51,21 +51,21 @@ export default function MainPage() {
 
 
                     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 place-items-center">
-    {socialLinks.map((social, index) => (
-        <a 
-            key={index} 
-            href={social.link} 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className={`w-40 h-48 flex flex-col items-center justify-center p-4 ${social.color} rounded-xl shadow-lg 
-                        hover:scale-110 transition-transform animate__animated animate__backInUp`}
-            style={{ animationDelay: `${index * 0.3}s` }}
-        >
-            <img src={social.icon} alt={social.name} className="w-16 h-16 mb-2" />
-            <span className="text-lg font-semibold text-white">{social.name}</span>
-        </a>
-    ))}
-</div>
+                        {socialLinks.map((social, index) => (
+                            <a 
+                                key={index} 
+                                href={social.link} 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className={`w-40 h-48 flex flex-col items-center justify-center p-4 ${social.color} rounded-xl shadow-lg 
+                                            hover:rotate-5 transition-transform animate__animated animate__backInUp`}
+                                style={{ animationDelay: `${index * 0.3}s` }}
+                            >
+                                <img src={social.icon} alt={social.name} className="w-16 h-16 mb-2" />
+                                <span className="text-lg font-semibold text-white">{social.name}</span>
+                            </a>
+                        ))}
+                    </div>
                 </motion.div>
 
                 <motion.div 
