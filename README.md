@@ -27,11 +27,11 @@ Este proyecto muestra sus redes sociales, enlaces de donación y comunidad, todo
 src/
 │
 ├── assets/                # Imágenes y recursos
+├── styles/                # Estilos globales y personalizados
 ├── views/
 │   ├── Header.jsx         # Nombre, foto y Discord
 │   ├── mainPage.jsx       # Redes sociales y Sección de donaciones
 │
-├── styles/                # Estilos globales y personalizados
 └── App.jsx                # Componente principal
 ```
 
