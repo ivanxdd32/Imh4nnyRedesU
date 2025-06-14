@@ -58,7 +58,7 @@ npm run dev
 
 ## 🌐 Enlace en línea
 
-🖥️ [Abrir Imh4nnyRedesU](https://imh4nny-hubupdate.onrender.com/)  
+- 🖥️ [Abrir Imh4nnyRedesU](https://imh4nny-hubupdate.onrender.com/)  
 
 
 ## 🔗 Enlaces
