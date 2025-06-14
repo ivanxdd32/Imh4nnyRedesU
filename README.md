@@ -1,12 +1,67 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# IMH4NNY RedesU 🌈
 
-Currently, two official plugins are available:
+**Sitio web animado y colorido para la streamer IMH4NNY.**  
+Este proyecto muestra sus redes sociales, enlaces de donación y comunidad, todo en una interfaz llamativa y responsiva.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Características
 
-## Expanding the ESLint configuration
+- 🎨 Diseño alegre y dinámico con animaciones suaves.
+- 💬 Acceso directo a su servidor de Discord.
+- 🌐 Enlaces a redes sociales: Instagram, TikTok, Kick y YouTube.
+- 💖 Sección dedicada a donaciones con mensaje motivador.
+- 📱 Diseño responsive y adaptado a dispositivos móviles.
+- ⚙️ Animaciones interactivas usando **GSAP**, **Framer Motion** y **Animate.css**.
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tecnologías Usadas
+
+- **React** (con Vite)
+- **Tailwind CSS**
+- **GSAP**
+- **Framer Motion**
+- **Animate.css**
+
+## 📁 Estructura del Proyecto
+
+```
+src/
+│
+├── assets/                # Imágenes y recursos
+├── views/
+│   ├── Header.jsx         # Nombre, foto y Discord
+│   ├── mainPage.jsx       # Redes sociales y Sección de donaciones
+│
+├── styles/                # Estilos globales y personalizados
+└── App.jsx                # Componente principal
+```
+
+## 🚀 Cómo Ejecutar el Proyecto
+
+```bash
+# Clona el repositorio
+git clone https://github.com/ivanxdd32/Imh4nnyRedesU.git
+
+# Entra al directorio
+cd Imh4nnyRedesU
+
+# Instala dependencias
+npm install
+
+# Ejecuta el servidor de desarrollo
+npm run dev
+```
+
+## 📸 Vista Previa
+
+![Captura del sitio](./public/Vista-Previa.png)
+
+## 📬 Contacto
+
+Para sugerencias o colaboraciones:  
+📧 ivanandresmartinezrios@gmail.com  
+🐙 [GitHub](https://github.com/ivanxdd32)
+
+---
+
+> Este sitio es un homenaje visual para la comunidad de IMH4NNY 💜  
+> ¡Diseñado con cariño, código y café!
