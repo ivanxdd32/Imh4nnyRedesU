@@ -55,6 +55,16 @@ npm run dev
 
 ![Captura del sitio](./public/Vista-Previa.png)
 
+
+## 🌐 Enlace en línea
+
+🖥️ [Abrir Imh4nnyRedesU](https://imh4nny-hubupdate.onrender.com/)  
+
+
+## 🔗 Enlaces
+
+- 📂 [Repositorio en GitHub](https://github.com/ivanxdd32/Imh4nnyRedesU)
+
 ## 📬 Contacto
 
 Para sugerencias o colaboraciones:  
