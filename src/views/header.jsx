@@ -1,7 +1,6 @@
-import React from "react";
 import { motion } from "framer-motion";
-import discord from "../assets/discord.png";
-import profile from "../assets/profile.png";
+import discord from "../assets/discord.webP";
+import profile from "../assets/profile.webP";
 
 export default function Header() {
   return (
@@ -13,7 +12,7 @@ export default function Header() {
     >
       {/* Icono de Discord */}
       <a
-        href="https://discord.gg/tu-servidor"
+        href="https://discord.gg/ytRxpM35Kz"
         target="_blank"
         rel="noopener noreferrer"
       >

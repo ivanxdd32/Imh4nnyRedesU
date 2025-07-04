@@ -1,4 +1,3 @@
-
 # IMH4NNY RedesU 🌈
 
 **Sitio web animado y colorido para la streamer IMH4NNY.**  
@@ -53,13 +52,11 @@ npm run dev
 
 ## 📸 Vista Previa
 
-![Captura del sitio](./public/Vista-Previa.png)
-
+![Captura del sitio](./public/Vista-Previa.webP)
 
 ## 🌐 Enlace en línea
 
-- 🖥️ [Abrir Imh4nnyRedesU](https://imh4nny-hubupdate.onrender.com/)  
-
+- 🖥️ [Abrir Imh4nnyRedesU](https://imh4nny-hubupdate.onrender.com/)
 
 ## 🔗 Enlaces
 

@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import instagram from "../assets/instagram.png";
-import tiktok from "../assets/tiktok.png";
-import kick from "../assets/kick.png";
-import youtube from "../assets/youtube.png";
+import instagram from "../assets/instagram.webP";
+import tiktok from "../assets/tiktok.webP";
+import kick from "../assets/kick.webP";
+import youtube from "../assets/youtube.webP";
 
 export default function MainPage() {
   const socialLinks = [
@@ -16,19 +16,19 @@ export default function MainPage() {
     {
       name: "TikTok",
       icon: tiktok,
-      link: "https://tiktok.com/@imh4nny",
+      link: "https://www.tiktok.com/@soyhanny_?is_from_webapp=1&sender_device=pc",
       color: "bg-black",
     },
     {
       name: "Kick",
       icon: kick,
-      link: "https://kick.com/imh4nny",
+      link: "https://kick.com/h4nny",
       color: "bg-green-500 bg-opacity-80",
     },
     {
       name: "YouTube",
       icon: youtube,
-      link: "https://youtube.com/@imh4nny",
+      link: "https://www.youtube.com/@Imh4nny",
       color: "bg-red-500 bg-opacity-80",
     },
   ];
