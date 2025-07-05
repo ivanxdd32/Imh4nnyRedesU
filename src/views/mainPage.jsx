@@ -53,7 +53,7 @@ export default function MainPage() {
   }, [isFirstRender]);
 
   return (
-    <div className="bg-gray-900 text-white min-h-screen flex flex-col items-center justify-center px-6 py-12">
+    <div className="bg-gray-900 text-white min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 py-8 sm:py-12">
       <div className="max-w-screen-lg w-full">
         {/* Sección de Redes Sociales */}
         <motion.div
@@ -62,7 +62,7 @@ export default function MainPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <h2 className="text-3xl font-bold mb-12 text-pink-400 h-12">
+          <h2 className="text-base sm:text-xl md:text-3xl font-bold mb-14 text-pink-400 flex flex-wrap items-center justify-center gap-1 sm:gap-2 text-center">
             <Typewriter
               words={["¡Sígueme en mis redes!"]}
               loop={1}
@@ -76,36 +76,35 @@ export default function MainPage() {
               <motion.span
                 key={emotes[emoteIndex]}
                 initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
+                animate={{ opacity: 1, scale: [1, 1.3, 1] }}
                 exit={{ opacity: 0, scale: 0.8 }}
                 transition={{
                   duration: 0.4,
                   delay: isFirstRender ? 3 : 0,
                 }}
-                className="text-3xl"
+                className="text-xl sm:text-2xl md:text-3xl inline-block"
               >
                 {emotes[emoteIndex]}
               </motion.span>
             </AnimatePresence>
           </h2>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 place-items-center">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 place-items-center">
             {socialLinks.map((social, index) => (
               <a
                 key={index}
                 href={social.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`w-40 h-48 flex flex-col items-center justify-center p-4 ${social.color} rounded-xl shadow-lg 
-                hover:rotate-5 transition-transform animate__animated animate__backInUp`}
+                className={`w-32 h-40 sm:w-36 sm:h-44 md:w-40 md:h-48 flex flex-col items-center justify-center p-4 ${social.color} rounded-xl shadow-lg hover:rotate-5 transition-transform animate__animated animate__backInUp`}
                 style={{ animationDelay: `${index * 0.3}s` }}
               >
                 <img
                   src={social.icon}
                   alt={social.name}
-                  className="w-16 h-16 mb-2"
+                  className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 mb-2"
                 />
-                <span className="text-lg font-semibold text-white">
+                <span className="text-sm sm:text-base font-semibold text-white">
                   {social.name}
                 </span>
               </a>
@@ -114,13 +113,13 @@ export default function MainPage() {
         </motion.div>
 
         <motion.div
-          className="text-center mt-24 p-6 bg-gradient-to-r from-yellow-400 to-red-400 rounded-xl shadow-lg animate__animated"
+          className="text-center mt-20 sm:mt-24 p-4 sm:p-6 bg-gradient-to-r from-yellow-400 to-red-400 rounded-xl shadow-lg animate__animated"
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
         >
           {/* Título con los corazones animados */}
-          <h2 className="text-3xl font-bold text-gray-900">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900">
             <motion.span
               className="inline-block animate__animated animate__heartBeat"
               style={{
@@ -143,7 +142,7 @@ export default function MainPage() {
           </h2>
 
           {/* Texto motivacional */}
-          <p className="text-lg mt-2 text-gray-800">
+          <p className="text-base sm:text-lg mt-2 text-gray-900">
             Cada donación me ayuda a seguir creando contenido increíble para
             ustedes. ¡Gracias por el apoyo! 🎉
           </p>
@@ -153,7 +152,7 @@ export default function MainPage() {
             href="https://streamelements.com/imh4nny/donate"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-4 inline-block bg-gray-900 text-white px-6 py-3 rounded-lg font-bold shadow-md"
+            className="mt-4 inline-block bg-gray-900 text-white text-sm sm:text-base px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-bold shadow-md"
             whileHover={{
               scale: 1.1,
               boxShadow: "0px 0px 15px rgba(255, 255, 255, 0.5)",
