@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { Typewriter } from "react-simple-typewriter";
 import instagram from "../assets/instagram.webP";
 import tiktok from "../assets/tiktok.webP";
 import kick from "../assets/kick.webP";
@@ -33,24 +34,23 @@ export default function MainPage() {
     },
   ];
 
-  // Estado para la animación de máquina de escribir
-  const [typedText, setTypedText] = useState("");
-  const [cursorVisible, setCursorVisible] = useState(false);
-  const textToType = "¡Sígueme en mis redes!";
-  const typingSpeed = 100; // Velocidad de escritura
+  const emotes = ["🔥", "💜", "🎮", "🚀", "💖", "✨", "👾"];
+  const [emoteIndex, setEmoteIndex] = useState(0);
+  const [isFirstRender, setIsFirstRender] = useState(true);
 
   useEffect(() => {
-    let index = 0;
     const interval = setInterval(() => {
-      setTypedText(textToType.slice(0, index));
-      index++;
-      if (index > textToType.length) {
-        clearInterval(interval);
-        setCursorVisible(true); // Activa el cursor parpadeante al finalizar
-      }
-    }, typingSpeed);
+      setEmoteIndex((prev) => (prev + 1) % emotes.length);
+    }, 2000); // cada 2 segundos
     return () => clearInterval(interval);
   }, []);
+
+  useEffect(() => {
+    if (isFirstRender) {
+      const timer = setTimeout(() => setIsFirstRender(false), 100);
+      return () => clearTimeout(timer);
+    }
+  }, [isFirstRender]);
 
   return (
     <div className="bg-gray-900 text-white min-h-screen flex flex-col items-center justify-center px-6 py-12">
@@ -63,8 +63,30 @@ export default function MainPage() {
           transition={{ duration: 1 }}
         >
           <h2 className="text-3xl font-bold mb-12 text-pink-400 h-12">
-            {typedText}
-            <span className={cursorVisible ? "blink" : ""}>|</span>
+            <Typewriter
+              words={["¡Sígueme en mis redes!"]}
+              loop={1}
+              cursor
+              cursorStyle="|"
+              typeSpeed={80}
+              deleteSpeed={50}
+              delaySpeed={1000}
+            />
+            <AnimatePresence mode="wait">
+              <motion.span
+                key={emotes[emoteIndex]}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.8 }}
+                transition={{
+                  duration: 0.4,
+                  delay: isFirstRender ? 3 : 0,
+                }}
+                className="text-3xl"
+              >
+                {emotes[emoteIndex]}
+              </motion.span>
+            </AnimatePresence>
           </h2>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 place-items-center">
@@ -75,7 +97,7 @@ export default function MainPage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`w-40 h-48 flex flex-col items-center justify-center p-4 ${social.color} rounded-xl shadow-lg 
-                                            hover:rotate-5 transition-transform animate__animated animate__backInUp`}
+                hover:rotate-5 transition-transform animate__animated animate__backInUp`}
                 style={{ animationDelay: `${index * 0.3}s` }}
               >
                 <img
@@ -92,7 +114,7 @@ export default function MainPage() {
         </motion.div>
 
         <motion.div
-          className={`text-center mt-24 p-6 bg-gradient-to-r from-yellow-400 to-red-400 rounded-xl shadow-lg animate__animated`}
+          className="text-center mt-24 p-6 bg-gradient-to-r from-yellow-400 to-red-400 rounded-xl shadow-lg animate__animated"
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
