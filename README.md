@@ -50,10 +50,6 @@ npm install
 npm run dev
 ```
 
-## 📸 Vista Previa
-
-![Captura del sitio](./public/Vista-Previa.webP)
-
 ## 🌐 Enlace en línea
 
 - 🖥️ [Abrir Imh4nnyRedesU](https://imh4nny-hubupdate.onrender.com/)
