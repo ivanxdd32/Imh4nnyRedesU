@@ -5,6 +5,7 @@ import instagram from "../assets/instagram.webP";
 import tiktok from "../assets/tiktok.webP";
 import kick from "../assets/kick.webP";
 import youtube from "../assets/youtube.webP";
+import VantaWaves from "../components/VantaWaves";
 
 export default function MainPage() {
   const socialLinks = [
@@ -54,11 +55,12 @@ export default function MainPage() {
 
   return (
     <motion.div
-      className="bg-gray-900 text-white min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 py-8 sm:py-12"
+      className="bg-gray-900 text-white min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 py-8 sm:py-12 relative z-10"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
     >
+      <VantaWaves />
       <div className="max-w-screen-lg w-full">
         {/* Sección de Redes Sociales */}
         <motion.div
@@ -101,7 +103,7 @@ export default function MainPage() {
                 href={social.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`w-32 h-40 sm:w-36 sm:h-44 md:w-40 md:h-48 flex flex-col items-center justify-center p-4 ${social.color} rounded-xl shadow-lg hover:rotate-5 transition-transform animate__animated animate__backInUp`}
+                className={`w-36 h-40 sm:w-36 sm:h-44 md:w-40 md:h-48 flex flex-col items-center justify-center p-4 ${social.color} rounded-xl shadow-lg hover:rotate-5 transition-transform animate__animated animate__backInUp`}
                 style={{ animationDelay: `${index * 0.3}s` }}
               >
                 <img
@@ -168,6 +170,25 @@ export default function MainPage() {
           </motion.a>
         </motion.div>
       </div>
+      <footer className="text-white mt-20 text-center text-sm">
+        Creado con{" "}
+        <motion.span
+          className="inline-block animate__animated animate__heartBeat"
+          style={{
+            animationDelay: "2s",
+            animationIterationCount: "infinite",
+          }}
+        >
+          💖
+        </motion.span>{" "}
+        –{" "}
+        <a
+          href="https://discord.gg/ytRxpM35Kz"
+          className="text-pink-400 hover:underline"
+        >
+          Únete a la comunidad
+        </a>
+      </footer>
     </motion.div>
   );
 }
