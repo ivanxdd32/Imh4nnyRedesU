@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
-import instagram from "../assets/instagram.webP";
-import tiktok from "../assets/tiktok.webP";
-import kick from "../assets/kick.webP";
-import youtube from "../assets/youtube.webP";
+import instagram from "../assets/instagram.webp";
+import tiktok from "../assets/tiktok.webp";
+import kick from "../assets/kick.webp";
+import youtube from "../assets/youtube.webp";
 import VantaWaves from "../components/VantaWaves";
 
 export default function MainPage() {

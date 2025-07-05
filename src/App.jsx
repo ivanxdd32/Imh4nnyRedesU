@@ -1,5 +1,5 @@
 import "animate.css";
-import "./styles/Index.css";
+import "./styles/index.css";
 
 import Header from "./views/header";
 import MainPage from "./views/mainPage";

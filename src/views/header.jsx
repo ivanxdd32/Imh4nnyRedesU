@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import discord from "../assets/discord.webP";
-import profile from "../assets/profile.webP";
+import discord from "../assets/discord.webp";
+import profile from "../assets/profile.webp";
 
 export default function Header() {
   return (
