@@ -53,7 +53,12 @@ export default function MainPage() {
   }, [isFirstRender]);
 
   return (
-    <div className="bg-gray-900 text-white min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 py-8 sm:py-12">
+    <motion.div
+      className="bg-gray-900 text-white min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 py-8 sm:py-12"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1.5 }}
+    >
       <div className="max-w-screen-lg w-full">
         {/* Sección de Redes Sociales */}
         <motion.div
@@ -75,9 +80,9 @@ export default function MainPage() {
             <AnimatePresence mode="wait">
               <motion.span
                 key={emotes[emoteIndex]}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: [1, 1.3, 1] }}
-                exit={{ opacity: 0, scale: 0.8 }}
+                initial={{ opacity: 0, scale: 0.8, y: -10 }}
+                animate={{ opacity: 1, scale: 1.2, y: 0 }}
+                exit={{ opacity: 0, scale: 0.8, y: 10 }}
                 transition={{
                   duration: 0.4,
                   delay: isFirstRender ? 3 : 0,
@@ -104,7 +109,7 @@ export default function MainPage() {
                   alt={social.name}
                   className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 mb-2"
                 />
-                <span className="text-sm sm:text-base font-semibold text-white">
+                <span className="text-sm sm:text-lg font-semibold text-white">
                   {social.name}
                 </span>
               </a>
@@ -152,10 +157,10 @@ export default function MainPage() {
             href="https://streamelements.com/imh4nny/donate"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-4 inline-block bg-gray-900 text-white text-sm sm:text-base px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-bold shadow-md"
+            className="mt-4 inline-block bg-gray-900 text-white text-sm sm:text-base px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-bold shadow-md hover:rotate-5 transition-all duration-300"
             whileHover={{
               scale: 1.1,
-              boxShadow: "0px 0px 15px rgba(255, 255, 255, 0.5)",
+              boxShadow: "0px 0px 20px rgba(255, 0, 128, 0.5)",
             }}
             whileTap={{ scale: 0.9 }}
           >
@@ -163,6 +168,6 @@ export default function MainPage() {
           </motion.a>
         </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 }
